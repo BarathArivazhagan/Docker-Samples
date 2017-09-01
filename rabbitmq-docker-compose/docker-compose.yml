@@ -1,0 +1,13 @@
+version: '3'
+services:  
+  rabbitmq:
+   build: ./docker-rabbitmq
+   ports:
+      - "5673:5672"
+      - "15673:15672"
+   healthcheck:
+    test: ["CMD", "docker-health"]
+    interval: 10s
+    timeout: 10s
+    retries: 10
+  
