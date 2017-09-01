@@ -1,5 +1,9 @@
-# Docker-Samples
-This repository contains project samples for Spring Docker
+# Docker Services
 
 
-How to build Docker image using Eclipse IDE --> Eclipse Docker Tooling plugin
+This repository contains list of useful dockerfiles to run middleware services
+
+* RabbitMq
+* MongoDB
+* Apache Kafka
+

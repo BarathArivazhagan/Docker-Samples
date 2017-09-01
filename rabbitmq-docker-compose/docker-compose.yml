@@ -1,7 +1,7 @@
 version: '3'
 services:  
   rabbitmq:
-   build: ./docker-rabbitmq
+   build: ../rabbitmq-healthcheck
    ports:
       - "5673:5672"
       - "15673:15672"
