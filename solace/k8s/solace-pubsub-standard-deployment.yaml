@@ -1,0 +1,46 @@
+# deployment config for bank service
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: solace
+spec:
+  selector:
+    matchLabels:
+      app: solace
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: solace
+    spec:
+      containers:   
+      - name: solace-message-broker
+        image: solace/solace-pubsub-standard
+        ports:
+        - containerPort: 8080
+        - containerPort: 55555
+        - containerPort: 60943
+        - containerPort: 60080
+        - containerPort: 60443
+        env:
+        - name: username_admin_globalaccesslevel
+          value: admin
+        - name: username_admin_password
+          value: admin
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: solace-service
+spec:
+  selector:
+    app: solace
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+  - protocol: TCP
+    port: 55555
+    targetPort: 55555
