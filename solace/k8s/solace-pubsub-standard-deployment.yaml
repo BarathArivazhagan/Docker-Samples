@@ -16,6 +16,12 @@ spec:
       containers:   
       - name: solace-message-broker
         image: solace/solace-pubsub-standard
+        resources:
+          limits:
+           cpu: "100"       
+       args:
+        - -cpus
+        - "2"
         ports:
         - containerPort: 8080
         - containerPort: 55555
