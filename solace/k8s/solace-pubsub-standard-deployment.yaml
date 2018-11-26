@@ -39,8 +39,10 @@ spec:
   type: NodePort
   ports:
   - protocol: TCP
+    name: web-admin
     port: 8080
     targetPort: 8080
   - protocol: TCP
     port: 55555
     targetPort: 55555
+    name: smfp
