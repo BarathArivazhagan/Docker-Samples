@@ -11,6 +11,12 @@ $ docker volume create jenkins_home
 $ docker run --name jenkins-master -p 8080:8080 -p 50000:50000 -v jenkins_home:/var/jenkins_home -d jenkins/jenkins:lts
 ```
 
+## Retrieve jenkins admin password from docker logs or docker exec
+
+```
+$ docker logs jenkins-master
+```
+
 ##### Reference:
 
 [Jenkins Docker Hub](https://hub.docker.com/r/jenkins/jenkins/)
