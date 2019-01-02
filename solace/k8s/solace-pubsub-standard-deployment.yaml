@@ -1,4 +1,4 @@
-# deployment config for bank service
+# deployment config for solace pubsub standard
 apiVersion: apps/v1
 kind: Deployment
 metadata:
