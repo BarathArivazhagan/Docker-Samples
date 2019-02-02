@@ -11,3 +11,10 @@ $ docker logs nginx
 
 $ docker exec -it nginx sh
 ```
+
+### nginx with curl package
+
+```
+FROM nginx
+RUN apt-get update && apt-get -y install curl
+```
