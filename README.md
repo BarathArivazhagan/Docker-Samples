@@ -1,9 +1,6 @@
-# Docker Services
+#### Docker Services
 
 
-This repository contains list of useful dockerfiles to run middleware services
+This repository contains commonly used docker images to run as docker containers.
 
-* RabbitMq
-* MongoDB
-* Apache Kafka
 
