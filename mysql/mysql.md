@@ -17,5 +17,5 @@ $ docker run --name mysql-db  -p 3306:3306 -v /Users/barath/mysql_data/:/var/lib
 
 ```
 $ docker volume create mysql-data
-$ docker run --name mysql-db  -p 3306:3306 -v mysql-data/:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root  -d mysql:latest
+$ docker run --name mysql-db  -p 3306:3306 -v mysql-data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root  -d mysql:latest
 ```
